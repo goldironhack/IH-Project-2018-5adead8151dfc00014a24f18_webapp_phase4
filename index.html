@@ -1,15 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+
+	<!-- Bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<!-- Custom css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+
+	<title>SLINY</title>
+
 </head>
 <body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
-    </div>
-    <script src="index.js"></script>
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-md-12" id="top">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6" id = "tit">
+				<h1 id=title>STUDENT LOST IN NY</h1>
+				<!-- <button id="fillTable"> fill table </button> -->
+			</div>
+			<div class="col-md-6">
+				<div id="googleMapContainer"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id = "check">
+				Security <input type="checkbox" id="crimeCheck" onclick="crimeChecked()">
+				Distance <input type="checkbox" id="myCheck" onclick="afforChecked()">
+				Affordability <input type="checkbox" id="afforCheck" onclick="afforChecked()">
+			</div>
+			<div id="tableWrapper">
+					<div id="tableScroll">
+						<table align = "center">
+							<thead>
+								<tr>
+									<th colspan="12"> Top 10 New York's Districts </th>
+								</tr>
+								<tr>
+									<th> Place </th>
+									<th> Borough </th>
+									<th> BoroCD </th>
+									<th> Security </th>
+									<th> Affordability </th>
+									<th> Distance </th>
+								</tr>
+								<tbody id="mainTableBody">
+
+								</tbody>
+							</thead>
+						</table>
+					</div>
+				</div>
+		</div>
+
+	<!-- Jquery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+
+	<!-- Custom js -->
+	<script type="text/javascript" src="index.js"></script>
+
+	<!-- Google Map -->
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCJJCEbVpgTg8ZEU3cULnmLnZLVi6yrI0&libraries=geometry&callback=onGoogleMapResponse">
+	</script>
+
 </body>
 </html>
